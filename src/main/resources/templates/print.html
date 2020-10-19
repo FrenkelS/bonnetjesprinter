@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<title>Scouting Hilvarenbeek JOTI2020</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Hallo ' + ${naam} + '.'" />
+	<p>Je antwoord is ontvangen.</p>
+
+	<form action="/print" method="post">
+		<label for="naam">Naam:</label><br>
+		<input type="text" id="naam" name="naam" required="required" th:value="${naam}"><br>
+
+		<label for="antwoord">Antwoord:</label><br>
+		<textarea id="antwoord" name="antwoord" required="required"></textarea><br>
+		<br>
+
+		<input type="submit" value="Nog een antwoord versturen" />
+	</form>
+</body>
+</html>
