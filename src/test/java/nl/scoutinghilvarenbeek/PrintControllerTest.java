@@ -28,4 +28,5 @@ class PrintControllerTest {
 		verify(mockModel).addAttribute("naam", naam);
 		verify(mockBonnetjesPrinterService).print(naam, bericht);
 	}
+
 }
