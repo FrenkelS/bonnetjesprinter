@@ -29,14 +29,13 @@ public class SpeechSynthesizer {
 		synthesizer.allocate();
 	}
 
-	public void textToSpeech(String name, String message) throws AudioException, InterruptedException {
+	public void textToSpeech(String name, String message) throws AudioException {
 		// Resume Synthesizer
 		synthesizer.resume();
 
 		// Speaks the given text until the queue is empty.
 		synthesizer.speakPlainText(name, null);
 		synthesizer.speakPlainText(message, null);
-		synthesizer.waitEngineState(Synthesizer.QUEUE_EMPTY);
 	}
 
 }
