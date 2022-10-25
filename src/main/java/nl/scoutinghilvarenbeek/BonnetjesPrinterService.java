@@ -18,7 +18,7 @@ public class BonnetjesPrinterService {
 		this.speechSynthesizer = speechSynthesizer;
 	}
 
-	public void print(String naam, String bericht) throws AudioException, InterruptedException {
+	public void print(String naam, String bericht) throws AudioException {
 		String name = StringUtils.stripAccents(StringUtils.abbreviate(naam, 40));
 		String message = StringUtils.stripAccents(StringUtils.abbreviate(bericht, 80));
 

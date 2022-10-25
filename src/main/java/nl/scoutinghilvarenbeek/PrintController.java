@@ -18,7 +18,7 @@ public class PrintController {
 
 	@PostMapping("/print")
 	public void print(@RequestParam(name = "naam") String naam, @RequestParam(name = "bericht") String bericht,
-			Model model) throws AudioException, InterruptedException {
+			Model model) throws AudioException {
 		model.addAttribute("naam", naam);
 
 		bonnetjesPrinterService.print(naam, bericht);
