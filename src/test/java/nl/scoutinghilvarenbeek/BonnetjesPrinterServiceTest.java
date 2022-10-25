@@ -22,24 +22,25 @@ class BonnetjesPrinterServiceTest {
 				mockSpeechSynthesizer);
 
 		String naam = "A Very Very Very Very Very Very Long Name";
+		String ip = "ip.add.re.ss";
 		String bericht = "A very very very very very very very very very very very very very very long message.";
 
 		// act
-		bonnetjesPrinterService.print(naam, bericht);
+		bonnetjesPrinterService.print(naam, ip, bericht);
 
 		// assert
 		ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
 		verify(mockPrinter).print(captor.capture());
 		String message = captor.getValue();
 		assertTrue(message.endsWith("\n" //
-				+ "A Very Very Very Very Very Very Long ...:\n" //
+				+ "A Very Very Very Very Very Very Long ... (ip.add.re.ss):\n" //
 				+ "A very very very very very very very very very very very very very very long ...\n" //
 				+ "\n" //
 				+ "\n" //
 				+ "\n" //
 				+ "\n" //
 				+ "\n" //
-				+ "\n"));
+				+ "\n"), message);
 
 		verify(mockSpeechSynthesizer).textToSpeech("A Very Very Very Very Very Very Long ...",
 				"A very very very very very very very very very very very very very very long ...");
