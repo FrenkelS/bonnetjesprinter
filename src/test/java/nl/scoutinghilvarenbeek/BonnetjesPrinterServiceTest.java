@@ -35,11 +35,6 @@ class BonnetjesPrinterServiceTest {
 		assertTrue(message.endsWith("\n" //
 				+ "A Very Very Very Very Very Very Long ... (ip.add.re.ss):\n" //
 				+ "A very very very very very very very very very very very very very very long ...\n" //
-				+ "\n" //
-				+ "\n" //
-				+ "\n" //
-				+ "\n" //
-				+ "\n" //
 				+ "\n"), message);
 
 		verify(mockSpeechSynthesizer).textToSpeech("A Very Very Very Very Very Very Long ...",

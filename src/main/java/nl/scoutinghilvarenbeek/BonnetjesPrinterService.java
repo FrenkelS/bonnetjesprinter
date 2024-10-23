@@ -25,7 +25,7 @@ public class BonnetjesPrinterService {
 		String messageToPrint = "" //
 				+ LocalDateTime.now() + "\n" //
 				+ name + " (" + ip + "):\n" //
-				+ message + "\n\n\n\n\n\n\n";
+				+ message + "\n\n";
 
 		System.out.println(messageToPrint);
 
