@@ -29,7 +29,7 @@ public class Printer {
 	}
 
 	public void print(String message) {
-		byte[] buffer = (message + "\n\n\n\n\n\n\n\n\n\n").getBytes(StandardCharsets.US_ASCII);
+		byte[] buffer = (message + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n").getBytes(StandardCharsets.US_ASCII);
 
 		commPort.openPort();
 		commPort.writeBytes(buffer, buffer.length);
