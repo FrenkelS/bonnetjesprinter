@@ -34,8 +34,7 @@ class BonnetjesPrinterServiceTest {
 		String message = captor.getValue();
 		assertTrue(message.endsWith("\n" //
 				+ "A Very Very Very Very Very Very Long ... (ip.add.re.ss):\n" //
-				+ "A very very very very very very very very very very very very very very long ...\n" //
-				+ "\n"), message);
+				+ "A very very very very very very very very very very very very very very long ...\n"), message);
 
 		verify(mockSpeechSynthesizer).textToSpeech("A Very Very Very Very Very Very Long ...",
 				"A very very very very very very very very very very very very very very long ...");
